@@ -1,10 +1,41 @@
 import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './App.css'; 
+import MovieDetails from './components/MovieDetails';
+import { movieData } from './data';
+import MovieForm from './components/MovieForm';
+import {useState} from 'react';
+// import { useState } from "react";
 
 function App() {
+
+  const [searchTerm, setSearchTerm] = useState ("Batman");
+  const [isLoading, setIsLoading]= useState(false);
+  const [movies, setMovies] = useState([]);
+  const [error,setError] = useState();
+
   return (
-    <div className="App">
-      <header className="App-header">
+    // <div className="App">
+    <div>
+      <MovieForm props  ={movieData}></MovieForm>
+      {/* <HeaderFooter>
+        <Home />
+      </HeaderFooter>
+      <MovieForm/> */}
+      <MovieDetails movieData = {movieData}></MovieDetails>
+    </div>
+  );
+}
+
+// const searchTerm =()=>{
+
+//   const [searchTerm, setSearchTerm] = useState ("Batman");
+//   const [isLoading, setIsLoading]= useState(false);
+// // }
+
+export default App;
+
+{/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +48,4 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+      </header> */}
