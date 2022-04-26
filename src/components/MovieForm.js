@@ -8,7 +8,7 @@ const MovieForm = () => {
 }
 export default MovieForm
 
-// fucntion MovieForm () {
+// fucntion MovieForm () => {
 //     return (
 //         <div>MovieForm</div>
 
