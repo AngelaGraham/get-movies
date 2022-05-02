@@ -1,7 +1,7 @@
 import React from "react";
 
-import MovieCard from"./MovieCard";
-function MovieList(props) {
+import MovieCard from "./MovieCard";
+function MovieList(props) { 
     return(
         <div>
             {props.movies.map((movie)=>{
